@@ -19,7 +19,7 @@ pipeline {
         stage('Repo name') {
             steps {
                 container('aks-builder') {
-                    echo "$GIT_REPO_NAME"
+                    echo "$GIT_URL"
                 }
             }
         }
