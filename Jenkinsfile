@@ -22,5 +22,6 @@ pipeline {
                     echo "$GIT_REPO_NAME"
                 }
             }
+        }
     }
 }
