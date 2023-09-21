@@ -9,13 +9,18 @@ pipeline {
     }
 
     stages {
-        stage('Prepare environment') {
+        stage('Branch name') {
             steps {
                 container('aks-builder') {
                     echo "$BRANCH_MINUS"
-                    echo "$GIT_REPO_NAME"
                 }
             }
         }
+        stage('Repo name') {
+            steps {
+                container('aks-builder') {
+                    echo "$GIT_REPO_NAME"
+                }
+            }
     }
 }
